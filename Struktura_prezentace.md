@@ -1,6 +1,6 @@
 # Struktura prezentace
 
-1. Definice
+1. Definice, jaká paradigmata ukážeme
 
 2. Historický úvod
 

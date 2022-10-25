@@ -1,0 +1,55 @@
+\begin{frame}
+    \frametitle{Imperativní programování}
+    Program je napsaný jako posloupnost příkazů a určuje přesný způsob jak úlohu řešit. % Velmi blízké člověku, například kuchařky atd.
+
+    Imperativní programování se dá rozdělit hlavně na tyto způsoby: 
+    \begin{itemize}
+        \item Objektové programování
+        \item Procedurální programování
+    \end{itemize}
+
+    % Každý program je přeložen do strojového kódu, který je imperativní 
+    
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Imperativní programování - Historie}
+    První programovací jazyky byly strojové jazyky, ty se skládají z velmi jednoduchých instrukcí a dají se tedy považovat za imperativní jazyk.
+
+\end{frame}
+
+\begin{frame}[fragile]
+% Z https://stackoverflow.com/questions/51433054/add-two-numbers-in-assembly
+
+    \frametitle{Imperativní programování - Ukázka Assembleru}
+
+    \newfontfamily\AssemblyFamily[]{DejaVu Sans Mono}
+    \begin{lstlisting} [basicstyle=\linespread{0.9}\AssemblyFamily , language={[x86masm]Assembler}, numbers=left]
+SECTION .data         ;
+    extern printf     ;Procedura, vypisuje zásobník
+    global main       ;
+fmt:                  ;
+    db "%d", 10, 0    ;
+SECTION .text         ;
+main:
+    mov     eax, 14   ;Uloží 14 do registru eax
+    mov     ebx, 10   ;Uloží 10 do registru eax
+    add     eax, ebx  ;Sečte eax a ebx a uloží do eax
+    push    eax       ;Pošle hodnotu eax na zásobník
+    push    fmt       ;Pošle hodnotu fmt na zásobník
+    call    printf    ;Zavolá proceduru printf
+    mov     eax, 1    ;Uloží 1 do registru eax
+    int     0x80      ;Vyvolá přerušení a ukončí program
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Objektové programování}
+    
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Objektové programování}
+    
+\end{frame}
