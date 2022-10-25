@@ -25,23 +25,29 @@
 % Z https://stackoverflow.com/questions/51433054/add-two-numbers-in-assembly
     \frametitle{Imperativní programování - Ukázka Assembleru}
 
+    % Utf-8 enkódování nefunguje v lstlisting, proto jsou v literate nadefinované znaky
     \newfontfamily\AssemblyFamily[]{DejaVu Sans Mono}
-    \begin{lstlisting} [basicstyle=\linespread{0.9}\AssemblyFamily , language={[x86masm]Assembler}, xleftmargin=-0.75cm]
+    \begin{lstlisting} [basicstyle=\linespread{0.9}\AssemblyFamily,
+                        language={[x86masm]Assembler},
+                        xleftmargin=-0.75cm,
+                        extendedchars=true,
+                        literate={^}{{\v{z}}}1{$}{{\v{c}}}1{*}{{\v{s}}}1{?}{{\v{r}}}1,
+                        ]
 SECTION .data       ;
-    extern printf   ;načte proceduru
+    extern printf   ;Na$te proceduru
     global main     ;
 fmt:                ;
     db "%d", 10, 0  ;
 SECTION .text       ;
 main:
-    mov     eax, 14 ;Uloží 14 do registru eax
-    mov     ebx, 10 ;Uloží 10 do registru eax
-    add     eax, ebx;Uloží do eax součet eax a ebx 
-    push    eax     ;Pošle hodnotu eax na zásobník
-    push    fmt     ;Pošle hodnotu fmt na zásobník
+    mov     eax, 14 ;Ulo^í 14 do registru eax
+    mov     ebx, 10 ;Ulo^í 10 do registru eax
+    add     eax, ebx;Ulo^í do eax součet eax a ebx 
+    push    eax     ;Po*le hodnotu eax na zásobník
+    push    fmt     ;Po*le hodnotu fmt na zásobník
     call    printf  ;Zavolá proceduru printf
-    mov     eax, 1  ;Uloží 1 do registru eax
-    int     0x80    ;Přerušením ukončí program
+    mov     eax, 1  ;Ulo^í 1 do registru eax
+    int     0x80    ;P?eru*ením ukon$í program
     \end{lstlisting}
 \end{frame}
 
