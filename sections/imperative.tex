@@ -18,7 +18,13 @@
 
     Jejich nástupcem jsou jazyky symbolických adres (assembler). % Jeho hlavní výhoda oproti zdrojovému kódu je že kód lze jednodušeji modifikovat
     
-    Oba dva druhy jazyků se skládají z velmi jednoduchých instrukcí a dají se tedy považovat za imperativní jazyk.
+    Oba dva druhy jazyků se skládají z velmi jednoduchých instrukcí a většinou se
+    \footnote{Existují vyjímky: v moderní době jsou to hlavně FPGA (programovatelné hradlové pole) nebo historicky například tzv. lisp-machines} považují za imperativní jazyk.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Imperativní programování - Historie} % Možná to že se vyznačují cykly, přiřazením a příkazy pro větvení, ale nevím
 \end{frame}
 
 \begin{frame}[fragile]
@@ -39,10 +45,10 @@ SECTION .data       ;
 fmt:                ;
     db "%d", 10, 0  ;
 SECTION .text       ;
-main:
+main:               ;Ozna$uje za$átek programu
     mov     eax, 14 ;Ulo^í 14 do registru eax
     mov     ebx, 10 ;Ulo^í 10 do registru eax
-    add     eax, ebx;Ulo^í do eax součet eax a ebx 
+    add     eax, ebx;Ulo^í do eax sou$et eax a ebx 
     push    eax     ;Po*le hodnotu eax na zásobník
     push    fmt     ;Po*le hodnotu fmt na zásobník
     call    printf  ;Zavolá proceduru printf
@@ -53,8 +59,15 @@ main:
 
 
 \begin{frame}
-    \frametitle{Objektové programování}
+    \frametitle{Procedurální programování}
+    Toto paradigma vzniklo spolu se vznikem vyšších programovacích jazyků.
     
+    Základem paradigmatu je rozdělení programů do procedur/funkcí za cílem získání větší modularity.
+
+    Procedurální programovaní hodně zavisí na použití bloků a scope. %možná zmínit něco o tom jak funguje. call stack atd
+
+    Mezi hlavní představitele tohoto paradigmatu se řadí: \break C, Pascal, Fortran, COBOL 
+
 
 \end{frame}
 
