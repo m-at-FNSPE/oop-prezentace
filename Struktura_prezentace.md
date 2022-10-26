@@ -8,10 +8,11 @@
 	1. Strukturované x Nestrukturované (hlavně historicky)
 	2. Imperativní x Deklarativní
 	3. Pro imperativní
-		1. OOP
+		1. Procedurální
+		2. OOP
 			1. Class-based
 			2. Prototype-based
-		2. Procedurální
+		3. Aspect oriented
 	4. Pro Deklarativní
 		1. Programovací jazyky
 			1. Funkcionální
