@@ -1,2 +1,16 @@
 temp/
 .vscode/
+
+*.aux
+*.bcf
+*.fdb_latexmk
+*.fls
+*.pdf
+*.log
+*.nav
+*.out
+*.xml
+*.snm
+*.gz
+*.toc
+*.vrb
