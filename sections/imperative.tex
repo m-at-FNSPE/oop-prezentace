@@ -126,10 +126,51 @@ main:               ;Ozna$uje za$átek programu
 
 \begin{frame}
     \frametitle{OOP - Model využívající třídy}
-    
+    V tomto modelu uživatel definuje třídy které poté instancuje.
+
+    Třídu můžeme považovat za návod jak třídu instancovat.
+
+    Tento model je používaný např v C++, Javě.
 \end{frame}
 
 \begin{frame}
     \frametitle{OOP - Model využívající prototypy}
-    
+    V tomto modelu existují pouze objekty. 
+
+    Objektům přiřazujeme metody a atributy a můžeme od nich odvozovat další objekty. Rodičovský objekt od kterého odvozujeme nazýváme prototyp.
+
+    Jazyky, které tento model implementují jsou téměř vždy interpretované a používají dynamický typový systém.
+
+    Hlavním představitelem tohoto modelu je JavaScript, nebo popřípadě Lua.
+
+    %Zjisti jestli je tento model silnější než třídy
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{OOP - Model využívající prototypy}
+
+    Jak funguje dědění?\break
+    Existují 2 způsoby jak jazyky mohou dědění implementovat
+
+    \begin{enumerate}
+        \item Delegace \begin{itemize}
+            \item Odvozený objekt obsahuje tzv. delegační ukazatel (delegation pointer) na předka.
+            \item Pokud zavoláme metodu, objekt se ji nejdříve pokusí najít ve svých metodách, pokud ji neobsahuje tak se metodu pokusí najít postupně ve svých předcích.  
+        \end{itemize}
+        \item Zřetězení (Concatenation) \begin{itemize}
+            \item Zřídka používaný přístup. Používá ho například jazyk Kevo
+            \item Objekty neobsahují delegační ukazatel, místo toho je prototyp zkopírován.
+            \item Hlavním rozdílem je, že změny v předcích se automaticky nepropagují do potomků
+        \end{itemize}
+    \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Objektově orientované programování - ukázka JavaScript}
+
+
 \end{frame}
