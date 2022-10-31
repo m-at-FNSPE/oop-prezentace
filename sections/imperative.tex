@@ -22,11 +22,6 @@
     \footnote{Existují vyjímky: v moderní době jsou to hlavně FPGA (programovatelné hradlové pole) nebo historicky například tzv. lisp-machines} považují za imperativní jazyk.
 \end{frame}
 
-
-\begin{frame}[fragile]
-    \frametitle{Imperativní programování - Historie} % Možná to že se vyznačují cykly, přiřazením a příkazy pro větvení, ale nevím
-\end{frame}
-
 \begin{frame}[fragile]
 % Z https://stackoverflow.com/questions/51433054/add-two-numbers-in-assembly
     \frametitle{Imperativní programování - Ukázka Assembleru}
@@ -109,10 +104,23 @@ main:               ;Ozna$uje za$átek programu
 
 
 
-\begin{frame}
-    \frametitle{Objektově orientované programování - ukázka Ruby}
+\begin{frame}[fragile]
+    \frametitle{Objektově orientované programování - ukázka Ruby\footnote{https://www.includehelp.com/ruby/print-power-of-a-number.aspx}}
 
-
+\begin{lstlisting}[]
+def pow(a,b)
+    power=1
+    for i in 1..b
+        power=power*a
+    end
+    return power
+end
+puts "Enter Base:"
+base=gets.chomp.to_i
+puts "Enter exponent:"
+expo=gets.chomp.to_i
+puts "The power is #{pow(base,expo)}"  
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}
@@ -135,7 +143,7 @@ main:               ;Ozna$uje za$átek programu
 
 \begin{frame}
     \frametitle{OOP - Model využívající prototypy}
-    V tomto modelu existují pouze objekty. 
+    V tomto modelu existují pouze objekty. %\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain}
 
     Objektům přiřazujeme metody a atributy a můžeme od nich odvozovat další objekty. Rodičovský objekt od kterého odvozujeme nazýváme prototyp.
 
@@ -169,8 +177,23 @@ main:               ;Ozna$uje za$átek programu
 \end{frame}
 
 
-\begin{frame}
-    \frametitle{Objektově orientované programování - ukázka JavaScript}
+\begin{frame}[fragile]
+    \frametitle{Objektově orientované programování - ukázka JavaScript \footnote{https://javascript.info/prototype-inheritance}   }
+\begin{lstlisting}[]
 
+let animal = {
+  eats: true,
+  walk() {
+    alert("Animal walk");  }};
+let rabbit = {
+  jumps: true,
+  __proto__: animal};
+let longEar = {
+  earLength: 10,
+  __proto__: rabbit};
+longEar.walk(); // prints "Animal walk"
+alert(longEar.jumps); // prints "true"
 
+\end{lstlisting}
+    
 \end{frame}

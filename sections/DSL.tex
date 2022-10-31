@@ -44,9 +44,10 @@ precision mediump float;
 uniform float u_time;
 
 void main() {
-    gl_FragColor = vec4(1.0,0.0,1.0,1.0);
+	vec2 st = gl_FragCoord.xy/u_resolution;
+	gl_FragColor = vec4(st.x,st.y,abs(sin(u_time)),1.0);
 }
-                        
+
     \end{lstlisting}
 
 
@@ -62,14 +63,17 @@ Příklad:
 
     \begin{lstlisting}[language=SQL]
 SELECT * FROM Customers
-WHERE Country='Czech Republic'; 
+WHERE Country='Czech_Republic'; 
     \end{lstlisting}
     
     
 \end{frame}
 
+
+\if false
 \begin{frame}
     \frametitle{Doménově specifické jazyky - Regular Expressions}
 
 
 \end{frame}
+\fi
