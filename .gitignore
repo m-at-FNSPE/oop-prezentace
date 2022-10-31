@@ -5,7 +5,6 @@ temp/
 *.bcf
 *.fdb_latexmk
 *.fls
-*.pdf
 *.log
 *.nav
 *.out
