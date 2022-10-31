@@ -10,7 +10,11 @@
 
 \begin{frame}
     \frametitle{Doménově specifické jazyky}
-    Tyto jazyky 
+    DSL jsou jazyky které jsou určené k řešení jednoho konkrétního problému.
+
+    Tyto jazyky většinou nejsou turingovsky kompletní. Ale vývojem se mohou turingovsky kompletní stát (Například Perl).
+
+    
 
 
 \end{frame}
@@ -18,12 +22,54 @@
 \begin{frame}
     \frametitle{Doménově specifické jazyky}
 
+    Jedním ze speciálních případů DSL jsou markup jazyky (HTML, LaTeX, Markdown)
+
+
 
 \end{frame}
 
+\begin{frame}[fragile]
+    \frametitle{Doménově specifické jazyky - Shader languagess}
+    Jazyky jako GLSL (OpenGL Shading Language) určené pro psaní shaderů pro grafické karty.
+    
+    Například GLSL používá upravenou syntaxi jazyka C. Příklad\footnote{https://thebookofshaders.com/}:
+
+    \newfontfamily\AssemblyFamily[]{DejaVu Sans Mono}
+    \begin{lstlisting} [basicstyle=\linespread{0.9}\AssemblyFamily,
+                        language={[x86masm]Assembler}]
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform float u_time;
+
+void main() {
+    gl_FragColor = vec4(1.0,0.0,1.0,1.0);
+}
+                        
+    \end{lstlisting}
+
+
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Doménově specifické jazyky - query languages}
+    Jazyky určené pro práci s databázemi, nejznámějším příkladem je SQL.
+
+Příklad:
+
+    \begin{lstlisting}[language=SQL]
+SELECT * FROM Customers
+WHERE Country='Czech Republic'; 
+    \end{lstlisting}
+    
+    
+\end{frame}
 
 \begin{frame}
-    \frametitle{Doménově specifické jazyky}
+    \frametitle{Doménově specifické jazyky - Regular Expressions}
 
 
 \end{frame}
